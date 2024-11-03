@@ -1,0 +1,109 @@
+name: 📋 Development Task
+description: Create a new development task
+labels: ["task"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to create a new development task. Please provide all relevant details to help with implementation.
+
+  - type: dropdown
+    id: sprint
+    attributes:
+      label: Sprint
+      description: Which sprint is this task part of?
+      options:
+        - "Sprint 1: Foundation"
+        - "Sprint 2: Game Engine Core"
+        - "Sprint 3: Networking Foundation"
+        - "Sprint 4: Multiplayer Features"
+        - "Sprint 5: Polish & Authentication"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Epic
+      description: Which epic does this task belong to?
+      options:
+        - Project Setup
+        - Core Communication
+        - Physics Engine
+        - Rendering System
+        - Network Protocol
+        - State Synchronization
+        - Room System
+        - Game Flow
+        - User System
+        - Final Polish
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: Story Points
+      description: Estimated story points (1, 2, 3, 5, 8, 13)
+      placeholder: "e.g., 5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What needs to be done?
+      placeholder: |
+        1. Objective
+        2. Technical requirements
+        3. Dependencies
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What criteria must be met to consider this task complete?
+      placeholder: |
+        - [ ] Unit tests written and passing
+        - [ ] Code review completed
+        - [ ] Documentation updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Any technical details or implementation notes
+      placeholder: |
+        - Performance requirements
+        - Architecture considerations
+        - Testing requirements
+    validations:
+      required: false
+
+  - type: input
+    id: complexity
+    attributes:
+      label: Cyclomatic Complexity Target
+      description: Target complexity level (must be ≤ 5)
+      placeholder: "e.g., 4"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Required Checks
+      description: Please confirm the following
+      options:
+        - label: This task follows the TypeScript strict mode guidelines
+          required: true
+        - label: Performance implications have been considered
+          required: true
+        - label: Security implications have been considered
+          required: true
