@@ -1,0 +1,89 @@
+name: 💡 Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature! Please provide as much detail as possible.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature are you suggesting?
+      options:
+        - Game Mechanics
+        - Multiplayer/Networking
+        - Performance Optimization
+        - User Interface
+        - Developer Tools
+        - Security
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Related Component
+      description: Which component would this feature affect?
+      options:
+        - Physics Engine
+        - Network Layer
+        - Worker System
+        - Game State Management
+        - Input Handling
+        - Rendering System
+        - Room Management
+        - Authentication
+        - Multiple Components
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: Describe the feature you'd like to see
+      placeholder: |
+        1. What problem does this solve?
+        2. How should it work?
+        3. What are the key benefits?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What criteria should be met for this feature to be considered complete?
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Are there any technical aspects that should be considered?
+      placeholder: |
+        - Performance impact
+        - Security implications
+        - Browser compatibility
+        - Network requirements
+    validations:
+      required: false
+
+  - type: input
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      placeholder: "e.g., High, Medium, Low"
+    validations:
+      required: true
